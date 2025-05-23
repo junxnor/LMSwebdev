@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Header {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .Header img {
+            height: 50px;
+            margin-bottom: -4px;
+        }
+
+        .Progress-CheckBox-Notes {
+            margin: 0px 0px 0px 85%;
+        }
+
+        .Progress-CheckBox input {
+            margin: 0px 0px 0px 90%;
+        }
+
+        .Grades-and-Feedbacks-Box {
+            margin: 0px 0px 0px 80%;
+        }
+
+        .Grades-and-Feedbacks-Box button {
+            padding: 10px;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="/Group Assignment/CSS/MenuBar.css">
+    
+</head>
+
+<body>
+    <script src="/Group Assignment/MenuBarAddClass.js" defer></script>
+
+    <div class="AllHeader">
+        <div class="Header">
+            <img src="/Group Assignment/Picture/logo.png" alt="Logo" style="height: 50px;">
+            <h1>| CourseVerse</h1>
+
+        </div>
+        <div class="SideBarButton">
+            <button id="SideBarButton">&#9776</button>
+
+        </div>
+
+        <nav id="navBar">
+
+            <div class="SideBar">
+                <ul class="StudentButton">
+
+                    <div class="SideBarButton-Close">
+                        <button id="SideBarButtonClose">&#9776</button>
+                    </div>
+
+                    <li onclick="window.location.href='/Group Assignment/Student Interface/Profile.php'">Profile</li>
+                </ul>
+
+                <ul class="LogOutButton">
+                    <li onclick="window.location.href='/Group Assignment/HomePage.html'">Log Out</li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div class="Module-Header">
+        <h1>Module 2</h1>
+        <p><a href="/Group Assignment/Student Interface/Course.php"> Dashboard</a> / Module 2 </p>
+    </div>
+    <hr>
+    <div class="Academic-Material">
+        <ul class="Content"></ul>
+        <h2><a>Learning Material</a></h2>
+        <h3 class="Progress-CheckBox-Notes">Progress</h3>
+        <ul class="Academic-Material-Content">
+            <li><a href="http://localhost/Group%20Assignment/Uploads/Module_2/StudentLecturerSlidesDownload.php">Lecturer Slides</a></li>
+            <div class="Progress-CheckBox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </div>
+            <li>Tutorial Excercise</li>
+            <div class="Progress-CheckBox">
+                <input type="checkbox">
+
+                <span class="checkmark"></span>
+            </div>
+            <li>Pass Year Exam Samples</li>
+            <div class="Progress-CheckBox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </div>
+        </ul>
+
+
+    </div>
+    <hr>
+    <div class="Grade-and-Feedback">
+        <h2>Grades and Feedbacks</h2>
+        <ul class="Module1-Grades">
+            <li>Feedbacks</li>
+            <div class="Grades-and-Feedbacks-Box">
+                <button onclick="window.location.href='/GROUP ASSIGNMENT/Grade&Feedback/StudentFeedback.php'">Feedbacks</button>
+            </div>
+            <li>Student Grades</li>
+            <div class="Grades-and-Feedbacks-Box">
+                <button onclick="window.location.href='/GROUP ASSIGNMENT/Grade&Feedback/StudentGrade.php'">Check Your Grades</button>
+            </div>
+        </ul>
+    </div>
+    <hr>
+</body>
+
+</html>

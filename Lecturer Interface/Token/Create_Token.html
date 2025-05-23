@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Header {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Header img {
+            height: 50px;
+            margin-bottom: -4px;
+        }
+    </style>
+    <link rel="stylesheet" href="/Group Assignment/CSS/MenuBar.css">
+</head>
+<body>
+    <script src="/Group Assignment/MenuBarAddClass.js" defer></script>
+
+    <div class="AllHeader">
+        <div class="Header">
+            <img src="/Group Assignment/Picture/Logo.png" alt="Logo" style="height: 50px;">
+            <h1>| CourseVerse</h1>
+        </div>
+        <div class="SideBarButton">
+            <button id="SideBarButton">&#9776</button>
+        </div>
+
+        <nav id="navBar">
+            <div class="SideBar">
+                <ul class="StudentButton">
+                    <div class="SideBarButton-Close">
+                        <button id="SideBarButtonClose">&#9776</button>
+                    </div>
+                    <li onclick="window.location.href='/Group Assignment/Student Interface/Profile.html'">Profile</li>
+                </ul>
+                <ul class="LogOutButton">
+                    <li onclick="window.location.href='/HomePage.html'">Log Out</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <button class="back-btn" onclick="window.location.href='/Group Assignment/Lecturer Interface/Token/Token_Home.html'">Back</button>
+    <form action="/Group Assignment/Lecturer Interface/Token/PHP/Create_Token.php" method="post" enctype="multipart/form-data">
+        <label>Email:</label>
+        <br>
+        <input type="email" name="Email" placeholder="Your Email">
+        <br>
+        <label>Subject:</label>
+        <br>
+        <input type="text" name="Subject" id="Subject" placeholder="Subject" required>
+        <br>
+        <label>Question:</label>
+        <br>
+        <input type="text" name="Question" id="Question" placeholder="Please type your Concern here" required>
+        <br>
+        <br>
+        <label>Any Picture?</label>
+        <br>
+        <input type="file" name="File" id="File">
+        <br>
+        <label>Make a Password to secure your token? (Optional)</label>
+        <input type="password" name="Password" id="Password" maxlength="30" placeholder="Insert a password to secure your token"> 
+        <button type="submit" name="Submit" value="Submit">Send</button>
+    </form>
+</body>
+</html>

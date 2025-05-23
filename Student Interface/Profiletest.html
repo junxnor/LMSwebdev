@@ -1,0 +1,178 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Header {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .Header img {
+            height: 50px;
+            margin-bottom: -4px;
+        }
+
+        .Course-Box {
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .Box-1 {
+            width: 250px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 10px 10px 0 0px;
+            position: relative;
+
+
+        }
+
+        .Logo-1,
+        .Box-1 input,
+        .Box-1 h4 {
+            justify-content: center;
+        }
+
+
+        .Logo-1 {
+            width: 100px;
+            padding-left: 60px;
+            padding-top: 30px;
+        }
+
+        .Box-1 input {
+            margin: 35px 44px 20px 35px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .Box-1 h4 {
+            padding-top: 5px;
+            text-align: center;
+        }
+
+
+        .Box-2 {
+            width: 250px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 10px 0px 0 0px;
+            position: relative;
+            pointer-events: all;
+            cursor: pointer;
+
+        }
+
+        .Math-1 img {
+            width: 250px;
+        }
+
+        .Box-2 progress {
+            align-items: center;
+            width: 240px;
+            margin-left: 5px;
+
+        }
+
+        .Box-2 h4 {
+            padding-top: 5px;
+            text-align: center;
+        
+
+        }
+
+        
+    </style>
+    <link rel="stylesheet" href="/Group Assignment/CSS/MenuBar.css">
+</head>
+
+<body>
+    <script src="/Group Assignment/MenuBarAddClass.js" defer></script>
+
+    <div class="AllHeader">
+        <div class="Header">
+            <img src="/Group Assignment/Picture/logo.png" alt="Logo" style="height: 50px;">
+            <h1>| CourseVerse</h1>
+            <h1>| Welcome <?php echo $prefixed_user_id ?></h1>
+        </div>
+        <div class="SideBarButton">
+            <button id="SideBarButton">&#9776</button>
+
+        </div>
+
+        <nav id="navBar">
+
+            <div class="SideBar">
+                <ul class="StudentButton">
+
+                    <div class="SideBarButton-Close">
+                        <button id="SideBarButtonClose">&#9776</button>
+                    </div>
+
+                    <li onclick="window.location.href='/Group Assignment/Student Interface/Profile.php'">Profile</li>
+                </ul>
+                    
+                <ul class="LogOutButton">
+                    <li onclick="window.location.href='/Group Assignment/HomePage.html'">Log Out</li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <br>
+    <br>
+    <hr>
+
+    <div class="Profile-Box">
+        <ul class="Profile-Drawer">
+            <p>User ID</p>
+            <div class="Profile-Box">
+                <output id="UserID" name="UserID" size="25px" type="text"><?php echo $prefixed_user_id   ?></output>
+
+            </div>
+        </ul>
+        <ul class="Profile-Drawer">
+            <p>First Name</p>
+            <div class="Profile-Box">
+                <output id="FirstName" name="FirstName" size="25px" type="text">
+
+            </div>
+        </ul>
+        <ul class="Profile-Drawer">
+            <p>Last Name</p>
+            <div class="Profile-Box">
+                <output id="LastName" name="LastName" size="25px" type="text">
+
+            </div>
+        </ul>
+        <ul class="Profile-Drawer">
+            <p>Email</p>
+            <div class="Profile-Box">
+                <output id="Email" name="Email" size="25px" type="text">
+
+            </div>
+        </ul>
+        <ul class="Profile-Drawer">
+            <p>Password</p>
+            <div class="Profile-Box">
+                <output id="Password" name="Password" size="25px" type="text">
+
+            </div>
+        </ul>
+
+
+
+    </div>
+
+
+    </body>
+
+</html>

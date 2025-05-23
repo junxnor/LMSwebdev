@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #d8b994;
+        }
+        .login {
+            width: 25%;
+            padding: 30px;
+            display: inline-block;
+            font-size: 20px;
+            background-color: bisque;
+            margin: 100px 0% 0% 35%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+
+        }
+
+        .login input {
+            width: 95%; /* Adjust the width as needed */
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .login button {
+            height: 40px;
+            padding: 5px;
+            margin: 0px 0px 7px 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <h1><center>Login As Lecturer</center><h1></h1><br>
+        <hr>
+        <form action="/Group Assignment/Lecturer Interface/PHP/LecturerLogin.php" method="post">
+        <Label>Email:</Label>
+        <input type="email" name="Email" id='Email' placeholder="Email" required><br>
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Password" id="Password" required><br>
+        <button type="submit">Login</button>
+        </form>
+        <label>Forgot Password?</label><br>
+            <button onclick="window.location.href='/Group Assignment/Lecturer Interface/Lecturer_ForgotPassword_CheckEmail.html'">Forgot Password</button>
+            <p>Don't Have an Account?</p>
+            <button onclick="window.location.href='/Group Assignment/Lecturer Interface/LecturerRegisterPage.html'">Register</button>
+            <br>
+            <button onclick="window.location.href='/Group Assignment/HomePage.html'">Back to Home Page</button>
+            <br>
+            <P>Having Problem?</P>
+            <button onclick="window.location.href='/Group Assignment/Lecturer Interface/Token/Token_Home.html'">Contact Admin</button>
+
+    </div>
+
+
+</body>
+
+</html>

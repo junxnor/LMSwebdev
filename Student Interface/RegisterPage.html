@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #d8b994;
+        }
+        .register {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 10%;
+            margin-left: 20%;
+            margin-right: 20%;
+            background-color: bisque;
+        }
+
+        .register input {
+            width: 95%;
+            /* Adjust the width as needed */
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .register button {
+            padding: 5px;
+            margin: 0px 0px 7px 0px;
+            height: 40px;
+        }
+
+        .Gender-Box p {
+            margin: -20px 0px 0px 0px ;
+        }
+
+        .Gender-Box input{
+            margin: 15px 0px 0px 100px ;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        function CheckPassword() {
+            let email = document.getElementById("Email").value;
+            let username = document.getElementById("Username").value;
+            let password = document.getElementById("Password");
+            let retype_password = document.getElementById("RetypePassword").value;
+
+
+
+
+            // Check if any required field is empty
+            if (!email || !username || !password.value || !retype_password) {
+                alert("Please fill in all required fields");
+                return false; // Prevent form submission
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Invalid email format. Please enter a valid Gmail address ending with '@gmail.com'");
+                return false; // Prevent form submission
+            }
+
+            if (password.value.length < 8) {
+                alert("Password must be at least 8 characters long");
+                return false; // Prevent form submission
+            }
+
+            if (!/[A-Z]/.test(password.value) || !/[a-z]/.test(password.value) || !/[!@#$%^&*(),.?":{}|<>]/.test(password.value)) {
+                alert("Password must contain at least one uppercase, one lowercase, and one special character");
+                return false; // Prevent form submission
+            }
+
+            if (password.value !== retype_password) {
+                alert("Password does not match, Please Try Again");
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+
+        function isValidEmail(email) {
+            // Regular expression for a Gmail address
+            var gmailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+            return gmailRegex.test(email);
+        }
+    </script>
+
+    <div class="register">
+        <h1>
+            <center>Register an Account</center>
+        </h1>
+        <hr>
+        <form method="post" action="/Group Assignment/PHP/Student_Account.php" onsubmit="return CheckPassword()">
+            <label>First Name:</label>
+            <input type="text" name="FirstName" id="FirstName" placeholder="Please enter your First Name">
+            <label>Last Name:</label>
+            <input type="text" name="LastName" id="LastName" placeholder="Please enter your Last Name">
+            <label>Email:</label>
+            <input type="email" name="Email" id="Email" placeholder="Please enter your Email" required><br>
+            <label>Username:</label>
+            <input type="text" name="Username" id="Username" maxlength="20" placeholder="Please enter your Username"
+                required><br>
+            <div class="Gender-Box">
+            <label>Gender:</label>
+             <input type="radio" name="Gender" value="Male" required><p>Male</p><br>
+             <input type="radio" name="Gender" value="Female" required><p>Female</p><br>
+            </div>
+            <label>Password:</label>
+            <input type="password" name="UserPassword" placeholder="Please enter a Password" id="Password" required><br>
+            <label>Retype Password:</label>
+            <input type="password" name="Retypepassword" placeholder="Please enter a Retype Password"
+                id="RetypePassword" required><br>
+                <hr>
+            <label>Security word<h4> (please screenshot it before you register)</h4></label><br>
+            <label>What is your favourite Color?</label><br>
+            <input type="text" name="SecurityWord" placeholder="Please Answer it" required><br>
+            <hr>
+            <button type="submit">Register</button><br>
+
+        </form>
+        <a href="LoginPage.html"><label>Have an Existing account?</label></a>
+        <button onclick="window.location.href='LoginPage.html'">Login </button>
+        <br>
+        <button onclick="window.location.href='/Group Assignment/HomePage.html'">Back to Home Page</button>
+    </div>
+
+    <script src="/Group Assignment/EmailValidation.js"></script>
+
+</body>
+
+</html>
