@@ -1,71 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .Header {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecturer Verification | CourseVerse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #eaf0fb;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
 
+    .Header {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+    }
 
-        .Header img {
-            height: 50px;
-            margin-bottom: -4px;
-        }
-        
+    .Header img {
+      height: 50px;
+      margin-right: 10px;
+    }
 
-        
-    </style>
-    <link rel="stylesheet" href="/Group Assignment/CSS/MenuBar.css">
+    .verification-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      margin: 8% auto;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #7494ec;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5f7bd6;
+    }
+
+    .back-btn {
+      margin-top: 10px;
+      background-color: #ccc;
+      color: #333;
+    }
+
+    .back-btn:hover {
+      background-color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <script src="/Group Assignment/MenuBarAddClass.js" defer></script>
 
-    <div class="AllHeader">
-        <div class="Header">
-            <img src="/Group Assignment/Picture/logo.png" alt="Logo" style="height: 50px;">
-            <h1>| CourseVerse</h1>
-            
-        </div>
-        <div class="SideBarButton">
-            <button id="SideBarButton">&#9776</button>
+  <div class="Header">
+    <img src="/Group Assignment/Picture/logo.png" alt="Logo">
+    <h1>| CourseVerse</h1>
+  </div>
 
-        </div>
-
-        <nav id="navBar">
-
-            <div class="SideBar">
-                <ul class="StudentButton">
-
-                    <div class="SideBarButton-Close">
-                        <button id="SideBarButtonClose">&#9776</button>
-                    </div>
-
-                    <!-- <li onclick="window.location.href='/Group Assignment/Student Interface/Profile.php'">Profile</li> -->
-                </ul>
-                    
-                <ul class="LogOutButton">
-                    <li onclick="window.location.href='/Group Assignment/HomePage.html'">Back to Homepage</li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <br>
-    <br>
-    <hr>
+  <div class="verification-box">
+    <h2>Lecturer Verification</h2>
     <form method="post" action="/Group Assignment/Lecturer Interface/PHP/Lecturer_verification.php">
-        <label>Lecturer Password:</label>
-        <input type="password" name="LecturerPassword" placeholder="Password">
-        <button type="submit">Verify</button>
+      <label>Lecturer Password:</label>
+      <input type="password" name="LecturerPassword" placeholder="Enter password" required>
+      <button type="submit">Verify</button>
     </form>
-    <br>
-    <div class="Back">
-        <button onclick="window.location.href='/Group Assignment/HomePage.html'">Back</button>
-    </div>
+    <button class="back-btn" onclick="window.location.href='/Group Assignment/HomePage.html'">Back</button>
+  </div>
+
 </body>
 </html>

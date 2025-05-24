@@ -2,67 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-color: #d8b994;
-        }
-        .login {
-            width: 25%;
-            padding: 30px;
-            display: inline-block;
-            font-size: 20px;
-            background-color: bisque;
-            margin: 100px 0% 0% 35%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - CourseVerse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #eaf0fb;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
 
+    .login {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      margin: 8% auto;
+      text-align: center;
+    }
 
-        }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
 
-        .login input {
-            width: 95%;
-            /* Adjust the width as needed */
-            padding: 10px;
-            margin-bottom: 10px;
-        }
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
 
-        .login button {
-            height: 40px;
-            padding: 5px;
-            margin: 0px 0px 7px 0px;
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
 
-        }
-    </style>
+    button {
+      width: 100%;
+      background-color: #7494ec;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5f7bd6;
+    }
+
+    p {
+      margin: 15px 0 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    hr {
+      margin: 15px 0;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="login">
-        <h1>
-            <center>Login</center>
-            <h1></h1><br>
-            <hr>
-            <form method="POST" action="/Group Assignment/PHP/Student_Account_login.php">
-                <Label>Email:</Label>
-                <input type="email" name="Email" id="Email" placeholder="Please enter your Email" required><br>
-                <label>Password:</label>
-                <input type="password" name="password" placeholder="Password" id="Password" required><br>
-                <button type="submit">Login</button>
-            </form>
-            <label>Forgot Password?</label><br>
-            <button onclick="window.location.href='/Group Assignment/Student Interface/CheckEmail.html'">Forgot Password</button>
-            <p>Don't Have an Account?</p>
-            <button onclick="window.location.href='RegisterPage.html'">Register</button>
-            <br>
-            <button onclick="window.location.href='/Group Assignment/HomePage.html'">Back to Home Page</button>
-            <br>
-            <P>Having Problem?</P>
-            <button onclick="window.location.href='/Group Assignment/Student Interface/Token_Home.html'">Contact Admin</button>
-    </div>
+  <div class="login">
+    <h1>Login</h1>
+    <hr>
+    <form method="POST" action="/Group Assignment/PHP/Student_Account_login.php">
+      <label>Email:</label>
+      <input type="email" name="Email" id="Email" placeholder="Please enter your Email" required />
 
+      <label>Password:</label>
+      <input type="password" name="password" placeholder="Password" id="Password" required />
 
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Forgot Password?</p>
+    <button onclick="window.location.href='/Group Assignment/Student Interface/CheckEmail.html'">Reset Password</button>
+
+    <p>Don't Have an Account?</p>
+    <button onclick="window.location.href='RegisterPage.html'">Register</button>
+
+    <button onclick="window.location.href='/Group Assignment/HomePage.html'">Back to Home Page</button>
+
+    <p>Having a Problem?</p>
+    <button onclick="window.location.href='/Group Assignment/Student Interface/Token_Home.html'">Contact Admin</button>
+  </div>
 </body>
 
 </html>

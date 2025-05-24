@@ -1,310 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CourseVerse - Home</title>
     <!-- Import Poppins font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <style>
-        /* Base styles */
-        body {
-            margin: 0;
-            overflow-x: hidden;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
-            color: #333;
-            min-height: 100vh;
-        }
+      /* Base styles */
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+        color: #333;
+        min-height: 100vh;
+      }
 
-        /* Header */
-        .AllHeader {
-            background: #7494ec;
-            color: white;
-            padding: 10px 0;
-            position: relative;
-        }
+      /* Header */
+      .AllHeader {
+        background: #7494ec;
+        color: white;
+        padding: 10px 0;
+        position: relative;
+      }
 
-        .Header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-weight: 600;
-            font-size: 1.8rem;
-        }
+      .Header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 1.8rem;
+      }
 
-        .Header img {
-            height: 50px;
-        }
+      .Header img {
+        height: 50px;
+      }
 
-        /* Sidebar toggle button (top right) */
-        .SideBarButton {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-        }
+      /* Sidebar toggle button (top right) */
+      .SideBarButton {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
 
-        .SideBarButton button {
-            padding: 10px;
-            background-color: #5f7bd6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+      .SideBarButton button {
+        padding: 10px;
+        background-color: #5f7bd6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
 
-        .SideBarButton button:hover {
-            background-color: #4b68c1;
-            transform: scale(1.1);
-        }
+      .SideBarButton button:hover {
+        background-color: #4b68c1;
+        transform: scale(1.1);
+      }
 
-        /* Sidebar styles */
-        #navBar {
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #7494ec;
-            color: white;
-            border-left: 1px solid #5f7bd6;
-            padding-top: 60px;
-            box-sizing: border-box;
-            transform: translateX(250px);
-            transition: transform 0.3s ease;
-            z-index: 1000;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-        }
+      /* Sidebar styles */
+      #navBar {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #7494ec;
+        color: white;
+        border-left: 1px solid #5f7bd6;
+        padding-top: 60px;
+        box-sizing: border-box;
+        transform: translateX(250px);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
 
-        /* Show sidebar when open */
-        #navBar.open {
-            transform: translateX(0);
-        }
+      /* Show sidebar when open */
+      #navBar.open {
+        transform: translateX(0);
+      }
 
-        /* Close button inside sidebar */
-        .SideBarButton-Close {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-        }
+      /* Close button inside sidebar */
+      .SideBarButton-Close {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
 
-        .SideBarButton-Close button {
-            padding: 8px;
-            background-color: #5f7bd6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 20px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+      .SideBarButton-Close button {
+        padding: 8px;
+        background-color: #5f7bd6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
 
-        .SideBarButton-Close button:hover {
-            background-color: #4b68c1;
-            transform: scale(1.1);
-        }
+      .SideBarButton-Close button:hover {
+        background-color: #4b68c1;
+        transform: scale(1.1);
+      }
 
-        /* Sidebar menu lists */
-        .SideBar ul {
-            list-style: none;
-            padding: 0 20px;
-            margin: 0 0 30px 0;
-        }
+      /* Sidebar menu lists */
+      .SideBar ul {
+        list-style: none;
+        padding: 0 20px;
+        margin: 0 0 30px 0;
+      }
 
-        .SideBar li {
-            background-color: #5f7bd6;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 500;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            border: 1px solid #4b68c1;
-        }
+      .SideBar li {
+        background-color: #5f7bd6;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border: 1px solid #4b68c1;
+      }
 
-        .SideBar li:hover {
-            background-color: #4b68c1;
-            transform: scale(1.05);
-        }
+      .SideBar li:hover {
+        background-color: #4b68c1;
+        transform: scale(1.05);
+      }
 
-        /* Main content area */
+      /* Main content area */
+      .Content {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px; /* added gap for spacing between boxes */
+        padding: 60px 20px 20px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      /* Notes columns */
+      .Side-notes,
+      .Mid-notes,
+      .Right-notes {
+        flex: 1;
+        font-size: 18px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+        color: #333;
+      }
+
+      /* Headings in notes */
+      .Side-notes h3,
+      .Mid-notes h3,
+      .Right-notes h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #7494ec;
+      }
+
+      /* Responsive for smaller screens */
+      @media (max-width: 768px) {
         .Content {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px; /* added gap for spacing between boxes */
-            padding: 60px 20px 20px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            box-sizing: border-box;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
         }
 
-        /* Notes columns */
         .Side-notes,
         .Mid-notes,
         .Right-notes {
-            flex: 1;
-            font-size: 18px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-            color: #333;
+          flex: 1 1 100%;
+          margin-bottom: 20px;
         }
 
-        /* Headings in notes */
-        .Side-notes h3,
-        .Mid-notes h3,
-        .Right-notes h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #7494ec;
+        #navBar {
+          width: 200px;
+          padding-top: 50px;
         }
+      }
 
-        /* Responsive for smaller screens */
-        @media (max-width: 768px) {
-            .Content {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
+      /* Bottom Follow us section */
+      .extra-content {
+        position: fixed;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+        width: 350px;
+        z-index: 2;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        color: #333;
+      }
 
-            .Side-notes,
-            .Mid-notes,
-            .Right-notes {
-                flex: 1 1 100%;
-                margin-bottom: 20px;
-            }
+      .extra-content p {
+        margin: 0 0 8px 0;
+        font-weight: 600;
+      }
 
-            #navBar {
-                width: 200px;
-                padding-top: 50px;
-            }
-        }
+      .extra-content .icons a {
+        margin: 0 8px;
+        color: #7494ec;
+        font-size: 24px;
+        transition: color 0.3s ease;
+      }
 
-        /* Bottom Follow us section */
-        .extra-content {
-            position: fixed;
-            left: 50%;
-            bottom: 30px;
-            transform: translateX(-50%);
-            width: 350px;
-            z-index: 2;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-        }
-
-        .extra-content p {
-            margin: 0 0 8px 0;
-            font-weight: 600;
-        }
-
-        .extra-content .icons a {
-            margin: 0 8px;
-            color: #7494ec;
-            font-size: 24px;
-            transition: color 0.3s ease;
-        }
-
-        .extra-content .icons a:hover {
-            color: #4b68c1;
-        }
+      .extra-content .icons a:hover {
+        color: #4b68c1;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="AllHeader">
-        <div class="Header">
-            <img src="/Group Assignment/Picture/Logo.png" alt="Logo" />
-            <h1>| CourseVerse</h1>
-        </div>
+      <div class="Header">
+        <img src="/Group Assignment/Picture/Logo.png" alt="Logo" />
+        <h1>| CourseVerse</h1>
+      </div>
 
-        <div class="SideBarButton">
-            <button id="SideBarButton">&#9776;</button>
-        </div>
+      <div class="SideBarButton">
+        <button id="SideBarButton">&#9776;</button>
+      </div>
 
-        <nav id="navBar">
-            <div class="SideBar">
-                <div class="SideBarButton-Close">
-                    <button id="SideBarButtonClose">&#10005;</button>
-                </div>
-                <ul class="StudentButton">
-                    <li onclick="window.location.href='/Group Assignment/Student Interface/RegisterPage.html'">Join Us</li>
-                    <li onclick="window.location.href='/Group Assignment/Student Interface/LoginPage.html'">Login</li>
-                </ul>
-                <ul class="AdminButton">
-                    <li onclick="window.location.href='/Group Assignment/Admin/Admin_verification.html'">Login as Admin</li>
-                </ul>
-                <ul class="LecturerButton">
-                    <li onclick="window.location.href='/Group Assignment/Lecturer Interface/Lecturer_verification.html'">Login as Lecturer</li>
-                </ul>
-                <!-- Removed Logout Button -->
-            </div>
-        </nav>
+      <nav id="navBar">
+        <div class="SideBar">
+          <div class="SideBarButton-Close">
+            <button id="SideBarButtonClose">&#10005;</button>
+          </div>
+          <ul class="StudentButton">
+            <li
+              onclick="window.location.href='/Group Assignment/Student Interface/RegisterPage.html'"
+            >
+              Join Us
+            </li>
+            <li
+              onclick="window.location.href='/Group Assignment/Student Interface/LoginPage.html'"
+            >
+              Login
+            </li>
+          </ul>
+          <ul class="AdminButton">
+            <li
+              onclick="window.location.href='/Group Assignment/Admin/Admin_verification.html'"
+            >
+              Login as Admin
+            </li>
+          </ul>
+          <ul class="LecturerButton">
+            <li
+              onclick="window.location.href='/Group Assignment/Lecturer Interface/Lecturer_verification.html'"
+            >
+              Login as Lecturer
+            </li>
+          </ul>
+          <!-- Removed Logout Button -->
+        </div>
+      </nav>
     </div>
 
     <div class="Content">
-        <div class="Side-notes">
-            <h3>About the System</h3>
-            <p>
-                Course Management System is more on managing the course and module for the student and the lecturer.
-            </p>
-        </div>
+      <div class="Side-notes">
+        <h3>About the System</h3>
+        <p>
+          Course Management System is more on managing the course and module for
+          the student and the lecturer.
+        </p>
+      </div>
 
-        <div class="Mid-notes">
-            <h3>System</h3>
-            <p>
-                The system provides a user-friendly interface, enabling students to register, log in, access learning materials, view feedback, and check grades.
-            </p>
-        </div>
+      <div class="Mid-notes">
+        <h3>System</h3>
+        <p>
+          The system provides a user-friendly interface, enabling students to
+          register, log in, access learning materials, view feedback, and check
+          grades.
+        </p>
+      </div>
 
-        <div class="Right-notes">
-            <h3>Development</h3>
-            <p>
-                The development of a Course Management System is beneficial in the current educational landscape by offering a comprehensive solution for students, lecturers, and administrators.
-            </p>
-        </div>
+      <div class="Right-notes">
+        <h3>Development</h3>
+        <p>
+          The development of a Course Management System is beneficial in the
+          current educational landscape by offering a comprehensive solution for
+          students, lecturers, and administrators.
+        </p>
+      </div>
     </div>
 
     <!-- Follow us bottom section -->
     <div class="extra-content">
-        <p>Follow us on:</p>
-        <div class="icons">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-github'></i></a>
-        </div>
+      <p>Follow us on:</p>
+      <div class="icons">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-github"></i></a>
+      </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navBar = document.getElementById('navBar');
-            const sideBarBtn = document.getElementById('SideBarButton');
-            const sideBarBtnClose = document.getElementById('SideBarButtonClose');
+      document.addEventListener("DOMContentLoaded", () => {
+        const navBar = document.getElementById("navBar");
+        const sideBarBtn = document.getElementById("SideBarButton");
+        const sideBarBtnClose = document.getElementById("SideBarButtonClose");
 
-            sideBarBtn.addEventListener('click', () => {
-                navBar.classList.add('open');
-            });
-
-            sideBarBtnClose.addEventListener('click', () => {
-                navBar.classList.remove('open');
-            });
+        sideBarBtn.addEventListener("click", () => {
+          navBar.classList.add("open");
         });
-    </script>
-</body>
 
+        sideBarBtnClose.addEventListener("click", () => {
+          navBar.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
 </html>

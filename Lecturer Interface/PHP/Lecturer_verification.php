@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 // Database connection parameters
@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $GetAdminPassword = $_POST['LecturerPassword'];
     $AdminPassword = "Lecturer123"; // Change to the actual correct password
 
-    if ($GetAdminPassword == $AdminPassword){
-        echo '<script> alert("Welcome User") </script>';
+    if ($GetAdminPassword == $AdminPassword) {
+        echo '<script> alert("Welcome Back Lecturer") </script>';
         echo '<script>window.location.href = "/Group Assignment/Lecturer Interface/LecturerLoginPage.html";</script>';
     } else {
         echo '<script> alert("Passwords do not match") </script>';
@@ -27,4 +27,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close the connection
 mysqli_close($conn);
-?>

@@ -2,65 +2,107 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-color: #d8b994;
-        }
-        .login {
-            width: 25%;
-            padding: 30px;
-            display: inline-block;
-            font-size: 20px;
-            background-color: bisque;
-            margin: 100px 0% 0% 35%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #eaf0fb;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
+    .login {
+      max-width: 400px;
+      margin: 10% auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
 
-        }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
 
-        .login input {
-            width: 95%;
-            /* Adjust the width as needed */
-            padding: 10px;
-            margin-bottom: 10px;
-        }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
 
-        .login button {
-            height: 40px;
-            padding: 5px;
-            margin: 0px 0px 7px 0px;
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
 
-        }
-    </style>
+    button {
+      width: 100%;
+      background-color: #7494ec;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5f7bd6;
+    }
+
+    .secondary-button {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .secondary-button:hover {
+      background-color: #ddd;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: 500;
+      color: #444;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="login">
-        <h1>
-            <center>Login</center>
-            <h1></h1><br>
-            <hr>
-            <form method="POST" action="/Group Assignment/Admin/PHP/Admin_Account_login.php">
-                <Label>Email:</Label>
-                <input type="email" name="Email" id="Email" placeholder="Please enter your Email" required><br>
-                <label>Password:</label>
-                <input type="password" name="password" placeholder="Password" id="Password" required><br>
-                <button type="submit">Login</button>
-            </form>
-            <label>Forgot Password?</label><br>
-            <button onclick="window.location.href='/Group Assignment/Admin/CheckEmail.html'">Forgot Password</button>
-            <p>Don't Have an Account?</p>
-            <button onclick="window.location.href='/Group Assignment/Admin/RegisterPage.html'">Register</button>
-            <br>
-            <button onclick="window.location.href='/Group Assignment/HomePage.html'">Back to Home Page</button>
+  <div class="login">
+    <h1>Admin Login</h1>
+    <hr />
+    <form method="POST" action="/Group Assignment/Admin/PHP/Admin_Account_login.php">
+      <label for="Email">Email:</label>
+      <input type="email" name="Email" id="Email" placeholder="Enter your Email" required />
 
-    </div>
+      <label for="Password">Password:</label>
+      <input type="password" name="password" id="Password" placeholder="Enter your Password" required />
 
+      <button type="submit">Login</button>
+    </form>
 
+    <p>Forgot your password?</p>
+    <button class="secondary-button" onclick="window.location.href='/Group Assignment/Admin/CheckEmail.html'">Reset Password</button>
+
+    <p>Don't have an account?</p>
+    <button class="secondary-button" onclick="window.location.href='/Group Assignment/Admin/RegisterPage.html'">Register</button>
+
+    <button class="secondary-button" onclick="window.location.href='/Group Assignment/HomePage.html'">Back to Home Page</button>
+  </div>
 </body>
 
 </html>
